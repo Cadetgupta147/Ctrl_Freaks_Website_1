@@ -24,6 +24,9 @@ html, body{
     color: black;
     padding: 1vh;
 }
+.nav_link:hover{
+    background-color: white;
+}
 .card_holder{
     display: flex;
     gap: 2vh;
@@ -39,5 +42,8 @@ html, body{
     justify-content: space-between;
 }
 .featured_item{
+    margin-bottom: 5vh;
+}
+.recommended{
     margin-bottom: 5vh;
 }
