@@ -7,3 +7,43 @@ html, body{
     height: 100%;
     width: 100%;
 }
+.trending-now{
+    text-align: center;
+    margin-bottom: 5vh;
+}
+.trending_nav{
+    display: flex;
+    background-color: rgb(231, 231, 231);
+    width: 50%;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+.nav_link, a{
+    text-decoration: none;
+    color: black;
+    padding: 1vh;
+}
+.nav_link:hover{
+    background-color: white;
+}
+.card_holder{
+    display: flex;
+    gap: 2vh;
+    margin-bottom: 5vh;
+    overflow: scroll;
+    margin-left: 5vh;
+}
+.card_holder::-webkit-scrollbar{
+    display: none;
+}
+.shoes_information{
+    display: flex;
+    justify-content: space-between;
+}
+.featured_item{
+    margin-bottom: 5vh;
+}
+.recommended{
+    margin-bottom: 5vh;
+}
