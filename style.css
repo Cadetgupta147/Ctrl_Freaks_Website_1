@@ -7,6 +7,36 @@ html, body{
     height: 100%;
     width: 100%;
 }
+img{
+    
+    width: 100%;
+    height: 2008;
+    
+}
+.contentOnImage{
+    
+    background-color: red;
+    width: 100%;
+    height: 208px;
+}
+.forPadding{
+    padding-bottom: 24px;
+}
+.containerLarge{
+    display: flex;
+    justify-content: space-around;
+}
+.scrollThese{
+    background-color: white;
+    width: 326;
+    height: 415.66;
+    overflow: scroll;
+    
+}
+.bottomText{
+    text-align: left;
+    font-weight: 600;
+}
 .trending-now{
     text-align: center;
     margin-bottom: 5vh;
