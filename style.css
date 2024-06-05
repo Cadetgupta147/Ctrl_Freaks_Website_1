@@ -25,6 +25,7 @@ img{
 .containerLarge{
     display: flex;
     justify-content: space-around;
+    
 }
 .scrollThese{
     background-color: white;
