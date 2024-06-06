@@ -8,6 +8,48 @@ html, body{
     width: 100%;
     overflow-x: hidden;
 }
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    background-color:whitesmoke;
+}
+li{
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    margin: 5px;
+    margin-top: 0px;
+    font-family: "Geologica", sans-serif;
+}
+.bottom-bar{
+    display: flex;
+    flex-direction: column;
+    background-color:#E21836;
+    height: 85px;
+
+}
+.left-side{
+    margin-top: 10px;
+    
+}
+.right-side{
+    position: absolute;
+    margin-left: 80%;
+    margin-top: 30px;
+}
+
+.ion-icon{
+    font-size: 80px;
+}
+#logo{
+    margin-right: 25px;
+}
+.socials{
+    position: relative;
+    display: inline;
+}
+
 /* img{
 
     width: 100%;
@@ -84,3 +126,4 @@ html, body{
 .recommended{
     margin-bottom: 5vh;
 }
+
