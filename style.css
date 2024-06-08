@@ -50,12 +50,12 @@ li{
     display: inline;
 }
 
-/* img{
+.img,img{
 
     width: 100%;
-    height: 2008;
+    /* height: ; */
     
-} */
+} 
 .contentOnImage{
     
     background-color: red;
