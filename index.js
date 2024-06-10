@@ -14,3 +14,4 @@ trending_nav.on("click",function(){
         }
     };
 });
+Shery.imageEffect(".card_img" ,{style:5, debug:true, gooey:true});
