@@ -126,14 +126,33 @@ li{
 .recommended{
     margin-bottom: 5vh;
 }
-.mens_card{
-    width: 341px;
+.imag{
     height: 341px;
+    width: 341px;
+    border: 1px solid black;
+}
+.mens_card{
+    height: 341px;
+    width: 341px;
+    border: 1px solid black;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c200d193318977.5e615372d7d52.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }
-.mens_card img{
-    width: 341px;
-    height: 341px;
-    position: absolute;
+#focus {
+    height: 20vh; /* Adjust size as needed */
+    width: 20vh; /* Adjust size as needed */
+    border: 1px solid black;
+    border-radius: 50%;
+    background-image: url(https://m.media-amazon.com/images/I/61i+-qySCsL._AC_UY1000_.jpg);
+    background-attachment: scroll;
+    background-position: center;
+    background-size: 100% 100%;
+    position: absolute; /* Position relative to .mens_card */
+    z-index: 1;
+    /*  */
 }
+
