@@ -143,16 +143,17 @@ li{
     overflow: hidden;
 }
 #focus {
-    height: 20vh; /* Adjust size as needed */
-    width: 20vh; /* Adjust size as needed */
-    border: 1px solid black;
-    border-radius: 50%;
-    background-image: url(https://m.media-amazon.com/images/I/61i+-qySCsL._AC_UY1000_.jpg);
-    background-attachment: scroll;
-    background-position: center;
-    background-size: 100% 100%;
-    position: absolute; /* Position relative to .mens_card */
+    position: absolute;
+    width: 50px;
+    height: 50px;
     z-index: 1;
-    /*  */
+    background-image: url(https://m.media-amazon.com/images/I/61i+-qySCsL._AC_UY1000_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 

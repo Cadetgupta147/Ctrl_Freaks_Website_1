@@ -15,7 +15,7 @@ trending_nav.on("click",function(){
         }
     };
 });
-var mensCard = $(".mens_card")[0]; // Get the raw DOM element
+var mensCard = $(".mens_card")[0]; 
 var focus = $("#focus");
 
 $(window).on("mousemove", function(e) {
