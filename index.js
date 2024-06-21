@@ -15,10 +15,10 @@ trending_nav.on("click",function(){
         }
     };
 });
-var mensCard = $(".mens_card")[0]; 
-var focus = $("#focus");
+var mensCard = $(".box_img")[0]; 
+var focus = $(".shoe_img");
 
-$(window).on("mousemove", function(e) {
+$(mensCard).on("mousemove", function(e) {
     // Get mouse position relative to .mens_card
     var rect = mensCard.getBoundingClientRect();
     var mouseX = e.clientX - rect.left;
