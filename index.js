@@ -1,33 +1,57 @@
-var trending_nav = $(".nav_link a");
-var featured_items = $(".featured_item");
-var focus = $("#focus");
-$(".nav_link").eq(0).css("background-color","red");
-trending_nav.on("click",function(){
-    var card_id = $(this).html();
-    for(var i = 0; i < featured_items.length ;i++){
-        if(featured_items.eq(i).attr("id") == card_id){
-            featured_items.eq(i).css("display","block");
-            $(".nav_link").eq(i).css("background-color","red");
-        }
-        else{
-            featured_items.eq(i).css("display","none");
-            $(".nav_link").eq(i).css("background-color","rgb(231, 231, 231)");
-        }
-    };
-});
-var mensCard = $(".box_img")[0]; 
-var focus = $(".shoe_img");
+$(document).ready(function() {
+    var trending_nav = $(".nav_link a");
+    var featured_items = $(".featured_item");
+    $(".nav_link").eq(0).css("background-color", "red");
 
-$(mensCard).on("mousemove", function(e) {
-    // Get mouse position relative to .mens_card
-    var rect = mensCard.getBoundingClientRect();
-    var mouseX = e.clientX - rect.left;
-    var mouseY = e.clientY - rect.top;
+    trending_nav.on("click", function() {
+        var card_id = $(this).html();
+        for (var i = 0; i < featured_items.length; i++) {
+            if (featured_items.eq(i).attr("id") == card_id) {
+                featured_items.eq(i).css("display", "block");
+                $(".nav_link").eq(i).css("background-color", "red");
+            } else {
+                featured_items.eq(i).css("display", "none");
+                $(".nav_link").eq(i).css("background-color", "rgb(231, 231, 231)");
+            }
+        }
+    });
 
-    focus.css({
-        left: mouseX + "px",
-        top: mouseY + "px"
+    var boxImg = $(".box_img")[0];
+    var shoeImg = $(".shoe_img");
+
+    $(boxImg).on("mousemove", function(e) {
+        // Get the position of the cursor relative to boxImg
+        var offset = $(this).offset();
+        var mouseX = e.pageX - offset.left;
+        var mouseY = e.pageY - offset.top;
+
+        // Calculate the center position of shoeImg
+        var shoeImgWidth = shoeImg.width();
+        var shoeImgHeight = shoeImg.height();
+        
+        var centerX = mouseX - shoeImgWidth / 2;
+        var centerY = mouseY - shoeImgHeight / 2;
+
+        // Check if the cursor is within the bounds of boxImg
+        if (mouseX >= 0 && mouseX <= $(this).width() && mouseY >= 0 && mouseY <= $(this).height()) {
+            shoeImg.css({
+                left: centerX + "px",
+                top: centerY + "px",
+                position: "absolute",
+                display: "block", // Ensure shoeImg is displayed
+                height: "35vh",
+                width: "20vw"
+            });
+        } else {
+            shoeImg.css({
+                display: "none"
+            });
+        }
+    });
+
+    $(boxImg).on("mouseleave", function() {
+        shoeImg.css({
+            display: "none"
+        });
     });
 });
-
-// Shery.imageEffect("" ,{style:5, debug:true, gooey:true});
