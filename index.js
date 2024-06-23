@@ -1,8 +1,8 @@
-$(document).ready(function() {
-    var trending_nav = $(".nav_link a");
-    var trending_items = $(".trending_items");
-    $(".nav_link").eq(0).css("background-color", "red");
-
+var trending_nav = $(".nav_link a");
+var trending_items = $(".trending_items");
+var boxImg = $(".box_img")[0];
+var shoeImg = $(".shoe_img");
+$(".nav_link").eq(0).css("background-color", "red");
     trending_nav.on("click", function() {
         var card_id = $(this).html();
         for (var i = 0; i < trending_items.length; i++) {
@@ -16,10 +16,7 @@ $(document).ready(function() {
         }
     });
 
-    var boxImg = $(".box_img")[0];
-    var shoeImg = $(".shoe_img");
-
-    $(boxImg).on("mousemove", function(e) {
+$(boxImg).on("mousemove", function(e) {
         // Get the position of the cursor relative to boxImg
         var offset = $(this).offset();
         var mouseX = e.pageX - offset.left;
@@ -49,12 +46,19 @@ $(document).ready(function() {
         }
     });
 
-    $(boxImg).on("mouseleave", function() {
+$(boxImg).on("mouseleave", function() {
         shoeImg.css({
             display: "none"
         });
     });
-});
 
-
-
+    function scrolll() {
+        var vw = $(window).width(); // Get the viewport width in pixels
+        $('.trending_items_container').animate({ scrollLeft: '-=' + vw }, 100);
+    };
+    
+    function scrollr() {
+        var vw = $(window).width(); // Get the viewport width in pixels
+        $('.trending_items_container').animate({ scrollLeft: '+=' + vw }, 100);
+    };
+    
