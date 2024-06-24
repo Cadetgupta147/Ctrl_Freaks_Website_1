@@ -173,7 +173,7 @@ li{
     height: 100vh;
     width: 93.9vw;
 }
-.mens_section{
+.section{
     display: flex;
     align-items: center;
     height: 100vh;
@@ -221,7 +221,6 @@ li{
 .shoe_img{
     position: absolute;
     z-index: 1;
-    background-image: url(https://m.media-amazon.com/images/I/61i+-qySCsL._AC_UY1000_.jpg);
     background-position: center center;
     background-attachment:  fixed;
     background-size: 100vh 50vw;
