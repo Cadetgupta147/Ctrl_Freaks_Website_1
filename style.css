@@ -11,7 +11,8 @@ html, body{
 .top-bar{
     display: flex;
     flex-direction: row;
-    background-color:whitesmoke;
+    background-color: #DEDEDE;
+    padding-top: 0.5em;
 }
 li{
     display: inline-block;
@@ -53,36 +54,98 @@ li{
 .img,img{
 
     width: 100%;
+    position: relative;
+    
     /* height: ; */
     
 } 
-.contentOnImage{
-    
-    background-color: red;
+.sectionOne{
+    background-color: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    position: relative;
+}
+.sectionOne:hover{
+    opacity: 1;
+}
+.sectionOne::before{
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,255), transparent 40%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
     width: 100%;
-    height: 208px;
+    z-index: 2;
+}
+
+.imageOverlay{
+    position: absolute;
+    padding-left: 5%;
+    top: 70%;
+    
+}
+.textOnImage{
+    font-family: "Geologica", sans-serif;
+    color: #DEDEDE;
+    
+}
+.btn1{
+    position: static;
+    size: 5em;
+
 }
 .forPadding{
-    padding-bottom: 24px;
+    padding-bottom: 5px;
+    padding-top: 8%;
+    margin-bottom: 5vh;
+    margin-left: 5vh;
 }
 /* .containerLarge{
     display: flex;
     justify-content: space-around;
     
 } */
-/* .scrollThese{
-    background-color: white;
-    width: 326;
-    height: 415.66;
-    overflow: scroll;
+.sectionTwo{
+    display: flex;
     
-} */
+}
+.scrollThese{
+    height: 66vh;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: visible;
+    justify-content: flex-start;
+    gap: 2vh;
+    margin-left: 5vh;
+} 
+.cards1{
+    flex: 1;
+    background-color: white;
+    height: auto;
+    width: auto;
+}
+.scrollTheseImg{
+    height: 70vh;
+}
+.scrollTheseImg:hover{
+    transition: scale(1,1);
+    height: 71vh;
+    border-radius: 3%;
+}
+
 .bottomText{
+    display: flex;
     text-align: left;
     font-weight: 600;
 }
 .trending-now{
     text-align: center;
+    margin-top: 8%;
     margin-bottom: 5vh;
 }
 .trending_nav{
