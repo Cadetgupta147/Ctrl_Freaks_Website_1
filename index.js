@@ -78,3 +78,45 @@ const handleOnMouseMove = e => {
     target.style.setProperty("--mouse-x", `${x}px`)
     target.style.setProperty("--mouse-y", `${y}px`)
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const imgContainer = document.querySelector('.sectionOne .imgContainer');
+    const imgWrappers = imgContainer.querySelectorAll('.imgWrapper');
+    const numImages = imgWrappers.length;
+    let currentIndex = 0;
+    let isScrolling;
+    let scrollInterval;
+
+    imgContainer.innerHTML += imgContainer.innerHTML;
+
+    function scrollImages() {
+        currentIndex = (currentIndex + 1) % numImages;
+        imgContainer.scrollTo({
+            left: (currentIndex % numImages) * imgContainer.clientWidth,
+            behavior: 'smooth'
+        });
+
+        if (currentIndex === 0) {
+            setTimeout(() => {
+                imgContainer.scrollLeft = 0;
+            }, 1000); 
+        }
+    }
+
+    scrollInterval = setInterval(scrollImages, 500);
+
+    imgContainer.addEventListener('scroll', function() {
+        window.clearInterval(scrollInterval);
+        if (imgContainer.scrollLeft >= (numImages * imgContainer.clientWidth)) {
+            imgContainer.scrollLeft = imgContainer.scrollLeft % (numImages * imgContainer.clientWidth);
+        }
+
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function() {
+            currentIndex = Math.round(imgContainer.scrollLeft / imgContainer.clientWidth);
+            scrollInterval = setInterval(scrollImages, 500); 
+        }, 66); 
+    });
+});
+
+

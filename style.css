@@ -81,6 +81,25 @@ li{
     width: 100%;
     z-index: 2;
 }
+.imgContainer {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgWrapper {
+    flex: 0 0 auto; 
+    width: 100%; 
+    scroll-snap-align: start; 
+}
+
+.imgWrapper .img {
+    width: 100%;
+    display: block;
+}
+
+
+
 
 .imageOverlay{
     position: absolute;
