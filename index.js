@@ -119,4 +119,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function toggleMenu() {
+    const leftSide = document.querySelector('.left-side');
+    leftSide.classList.toggle('show-menu');
+}
+
+
 

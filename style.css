@@ -1,86 +1,115 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html, body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-}
-.top-bar{
-    display: flex;
-    flex-direction: row;
-    background-color: #DEDEDE;
-    padding-top: 0.5em;
-}
-li{
-    display: inline-block;
-    padding-top: 3px;
-    padding-left: 15px;
-    padding-bottom: 3px;
-    margin: 5px;
-    margin-top: 0px;
     font-family: "Geologica", sans-serif;
 }
-.bottom-bar{
+
+.top-bar {
     display: flex;
-    flex-direction: column;
-    background-color:#E21836;
-    height: 85px;
-
-}
-.left-side{
-    margin-top: 10px;
-    
-}
-.right-side{
-    position: absolute;
-    margin-left: 80%;
-    margin-top: 30px;
+    flex-direction: row;
+    background-color: #333;
+    padding: 0.5em -1em;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.ion-icon{
-    font-size: 80px;
+li {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    color: #fff;
+    cursor: pointer;
 }
-#logo{
+
+li:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #E21836;
+    padding: 1em;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+}
+
+.ion-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+#logo {
     margin-right: 25px;
-}
-.socials{
-    position: relative;
-    display: inline;
+    font-size: 24px;
+    color: #fff;
 }
 
-.img,img{
+.socials {
+    display: flex;
+    align-items: center;
+}
 
+.img {
     width: 100%;
-    position: relative;
-    
-    /* height: ; */
-    
-} 
-.sectionOne{
-    background-color: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.1);
+    display: block;
+}
+
+.sectionOne {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
     position: relative;
+    transition: opacity 500ms;
 }
-.sectionOne:hover{
-    opacity: 1;
+
+.sectionOne:hover {
+    opacity: 0.8;
 }
-.sectionOne::before{
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,255), transparent 40%);
-    border-radius: inherit;
+
+.sectionOne::before {
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 1), transparent 40%);
     content: "";
     height: 100%;
-    left: 0px;
-    opacity: 0;
-    position: absolute;
-    top: 0px;
-    transition: opacity 500ms;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 500ms;
     z-index: 2;
 }
+
 .imgContainer {
     display: flex;
     overflow: hidden;
@@ -88,9 +117,9 @@ li{
 }
 
 .imgWrapper {
-    flex: 0 0 auto; 
-    width: 100%; 
-    scroll-snap-align: start; 
+    flex: 0 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
 }
 
 .imgWrapper .img {
@@ -98,213 +127,582 @@ li{
     display: block;
 }
 
-
-
-
-.imageOverlay{
+.imageOverlay {
     position: absolute;
     padding-left: 5%;
     top: 70%;
-    z-index: 100;  /*  for button animation */
-    
+    z-index: 100;
 }
-.textOnImage{
-    font-family: "Geologica", sans-serif;
-    color: #DEDEDE;
-    
-}
-.btn1{
-    position: static;
-    size: 5em;
 
+.textOnImage {
+    color: #DEDEDE;
+    font-size: 24px;
+    font-weight: bold;
 }
-.forPadding{
+
+.btn1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E21836;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.btn1:hover {
+    background-color: #C2172A;
+}
+
+.forPadding {
     padding-bottom: 5px;
     padding-top: 8%;
     margin-bottom: 5vh;
     margin-left: 5vh;
 }
-/* .containerLarge{
+
+.sectionTwo {
     display: flex;
-    justify-content: space-around;
-    
-} */
-.sectionTwo{
-    display: flex;
-    
-}
-.scrollThese{
-    height: 66vh;
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    overflow: visible;
-    justify-content: flex-start;
-    gap: 2vh;
-    margin-left: 5vh;
-} 
-.cards1{
-    flex: 1;
-    background-color: white;
-    height: auto;
-    width: auto;
-}
-.scrollTheseImg{
-    height: 70vh;
-}
-.scrollTheseImg:hover{
-    transition: scale(1,1);
-    height: 71vh;
-    border-radius: 3%;
 }
 
-.bottomText{
+.scrollThese {
+    height: 66vh;
     display: flex;
+    overflow: auto;
+    gap: 2vh;
+    margin-left: 5vh;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1em;
+}
+
+.cards1 {
+    background-color: white;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 300ms;
+}
+
+.scrollTheseImg {
+    width: 100%;
+    height: auto;
+    transition: transform 300ms;
+}
+
+.scrollTheseImg:hover {
+    transform: scale(1.05);
+}
+
+.bottomText {
     text-align: left;
     font-weight: 600;
+    padding: 10px;
+    font-size: 16px;
 }
-.trending-now{
+
+.trending-now {
     text-align: center;
-    margin-top: 8%;
-    margin-bottom: 5vh;
+    margin: 2em 0;
+    font-size: 32px;
+    font-weight: bold;
 }
-.trending_nav{
+
+.trending_nav {
     display: flex;
-    background-color: rgb(231, 231, 231);
-    width: 50%;
-    justify-content: space-around;
-    margin: 0 auto;
-    margin-bottom: 5vh;
+    justify-content: center;
+    gap: 2vh;
+    margin-bottom: 2em;
 }
-.nav_link a{
+
+.nav_link a {
     text-decoration: none;
     color: black;
-    padding: 1vh;
+    padding: 1vh 2vh;
+    border-radius: 5px;
+    transition: background-color 300ms;
 }
-.nav_link :hover{
-    background-color: white;
-    text-decoration: none;
-    color: black;
+
+.nav_link:hover a {
+    background-color: #ddd;
 }
-.card_holder{
+
+.card_holder {
     display: flex;
     gap: 2vh;
-    margin-bottom: 5vh;
-    overflow: scroll;
+    overflow-x: auto;
     margin-left: 5vh;
+    padding-bottom: 1em;
+    scroll-snap-type: x mandatory;
 }
-.card_holder::-webkit-scrollbar{
+
+.card_holder::-webkit-scrollbar {
     display: none;
 }
-.shoes_information{
+
+.shoes_information {
     display: flex;
     justify-content: space-between;
+    padding: 1em;
 }
-.featured_item{
+
+.featured_item, .animation, .recommended {
     margin-bottom: 5vh;
 }
-.animation{
-    margin-bottom: 5vh;
-}
-.recommended{
-    margin-bottom: 5vh;
-}
-.mens_card{
+
+.mens_card {
     height: 341px;
     width: 341px;
-    border: 1px solid black;
-    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c200d193318977.5e615372d7d52.jpg);
     background-position: center;
     background-attachment: scroll;
     background-size: cover;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    transition: transform 300ms, box-shadow 300ms;
 }
+
+.mens_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .card {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
     scroll-behavior: smooth;
 }
-.card::-webkit-scrollbar, .trending_items_container::-webkit-scrollbar{
-        display: none;
+
+.card::-webkit-scrollbar, .trending_items_container::-webkit-scrollbar {
+    display: none;
 }
+
 .trending_items_container {
     display: flex;
-    flex-direction: row;
-    overflow-x: auto; /* Ensure container can scroll */
+    overflow-x: auto;
     scroll-behavior: smooth;
     height: 100vh;
     width: 93.9vw;
 }
-.section{
+
+.section {
     display: flex;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    /* position: relative; */
 }
-.trending_items{
+
+.trending_items {
     min-height: 100vh;
     min-width: 93.9vw;
     position: relative;
 }
-.left{
+
+.left {
     position: absolute;
-    top: 0vh;
-    left: 0vw;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 22.5vw;
 }
-.centre{
+
+.centre {
     position: absolute;
-    top: 0vh;
+    top: 0;
     left: 22.5vw;
     height: 100vh;
-    min-width: 50vw;
+    width: 50vw;
 }
-.right{
+
+.right {
     position: absolute;
-    top: 0vh;
+    top: 0;
     left: 72.5vw;
     height: 100vh;
-    min-width: 20vw;
+    width: 20vw;
 }
-.box_img{
+
+.box_img {
     height: 100vh;
     width: 50vw;
-    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c200d193318977.5e615372d7d52.jpg);
+    background-image: url(https://wallpapers.com/images/hd/new-balance-classic-nb-logo-yt9f0qrc69r0lku9.jpg);
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
     position: relative;
 }
-.box_img :hover{
-    cursor: none;
-}
-.shoe_img{
+
+.shoe_img {
     position: absolute;
     z-index: 1;
     background-position: center center;
-    background-attachment:  fixed;
     background-size: 100vh 50vw;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     border-radius: 50%;
-    /* transform: translate(-50%, -50%);  */
+    transition: transform 300ms;
 }
 
-.scroll{
+.scroll {
     width: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.scroll-left{
-    left: 0vw;
+
+.scroll-left {
+    left: 0;
 }
-.scroll-right{
-    right: 0vw;
+
+.scroll-right {
+    right: 0;
 }
-.scroll-button{
+
+.scroll-button {
     height: 25vh;
     width: 2.5vw;
     background-color: white;
     font-size: 3vw;
+    border: none;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.scroll-button:hover {
+    background-color: #ddd;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left-side, .right-side {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .trending_nav {
+        width: 80%;
+    }
+
+    .scroll {
+        height: 20vh;
+        width: 3vw;
+    }
+
+    .scroll-button {
+        font-size: 2vw;
+    }
+
+    .section {
+        flex-direction: column;
+        height: auto;
+        padding: 1em;
+    }
+
+    .left, .centre, .right {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .box_img, .shoe_img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For tablets and devices with a width of 768px or less */
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .top-bar, .bottom-bar {
+        flex-direction: row;
+        justify-content: end;
+        padding: 0.5em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .left-side .menu-item {
+        display: none;
+    }
+
+    .left-side.show-menu .menu-item {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .right-side {
+        flex-direction: row;
+        justify-content: end;
+        width: 100%;
+    }
+
+    .left-side {
+        flex-direction: column;
+    }
+
+    .top-bar li {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .scrollThese {
+        flex-direction: column;
+        height: auto;
+        margin-left: 0;
+        padding: 1em;
+    }
+
+    .cards1 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card_holder {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+        overflow: hidden;
+    }
+
+    .left, .centre, .right {
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        position: static;
+    }
+
+    .box_img {
+        width: 100%;
+        height: 50vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .shoe_img {
+        width: 80%;
+        height: auto;
+        top: 10%;
+        left: 10%;
+        background-size: contain;
+    }
+
+    .scroll {
+        height: 10vh;
+        width: 5vw;
+    }
+
+    .scroll-button {
+        font-size: 2vw;
+    }
+}
+
+/* For mobile devices with a width of 480px or less */
+@media (max-width: 480px) {
+    .bottom-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .left-side, .right-side {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .bottom-bar li {
+        margin: 0.5em 0;
+        padding: 10px;
+    }
+
+    .socials {
+        margin-top: 0.5em;
+    }
+
+    .bottom-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .left-side .menu-item {
+        display: none;
+    }
+
+    .left-side.show-menu .menu-item {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .right-side {
+        flex-direction: row;
+        justify-content: end;
+        width: 100%;
+    }
+
+    .left-side {
+        flex-direction: column;
+    }
+
+    .bottom-bar li {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .scrollThese {
+        flex-direction: column;
+        height: auto;
+        margin-left: 0;
+        padding: 1em;
+    }
+
+    .cards1 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card_holder {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+        overflow: hidden;
+    }
+
+    .left, .centre, .right {
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        position: static;
+    }
+
+    .box_img {
+        width: 100%;
+        height: 50vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .shoe_img {
+        width: 80%;
+        height: auto;
+        top: 10%;
+        left: 10%;
+        background-size: contain;
+    }
+
+    .scroll {
+        height: 10vh;
+        width: 5vw;
+    }
+
+    .scroll-button {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .left-side, .right-side {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .bottom-bar li {
+        margin: 0.5em 0;
+        padding: 10px;
+    }
+
+    .socials {
+        margin-top: 0.5em;
+    }
+
+    .scrollThese {
+        flex-direction: column;
+        height: auto;
+        margin-left: 0;
+        padding: 1em;
+    }
+
+    .cards1 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card_holder {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+        overflow: hidden;
+    }
+
+    .left, .centre, .right {
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        position: static;
+    }
+
+    .box_img {
+        width: 100%;
+        height: 30vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .shoe_img {
+        width: 70%;
+        height: auto;
+        top: 15%;
+        left: 15%;
+        background-size: contain;
+    }
+
+    .scroll {
+        height: 5vh;
+        width: 10vw;
+    }
+
+    .scroll-button {
+        font-size: 2vw;
+    }
+
+    .textOnImage {
+        font-size: 18px;
+    }
+
+    .btn1 {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
 }
