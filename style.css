@@ -28,18 +28,15 @@ li{
     flex-direction: column;
     background-color:#E21836;
     height: 85px;
-
 }
 .left-side{
     margin-top: 10px;
-    
 }
 .right-side{
     position: absolute;
     margin-left: 80%;
     margin-top: 30px;
 }
-
 .ion-icon{
     font-size: 80px;
 }
@@ -50,14 +47,9 @@ li{
     position: relative;
     display: inline;
 }
-
 .img,img{
-
     width: 100%;
     position: relative;
-    
-    /* height: ; */
-    
 } 
 .sectionOne{
     background-color: rgba(255,255,255,0.02);
@@ -79,25 +71,21 @@ li{
     top: 0px;
     transition: opacity 500ms;
     width: 100%;
-    z-index: 2;
+    z-index: 2%;
 }
-
 .imageOverlay{
     position: absolute;
     padding-left: 5%;
     top: 70%;
     z-index: 100;  /*  for button animation */
-    
 }
 .textOnImage{
     font-family: "Geologica", sans-serif;
     color: #DEDEDE;
-    
 }
 .btn1{
     position: static;
     size: 5em;
-
 }
 .forPadding{
     padding-bottom: 5px;
@@ -105,16 +93,10 @@ li{
     margin-bottom: 5vh;
     margin-left: 5vh;
 }
-/* .containerLarge{
-    display: flex;
-    justify-content: space-around;
-    
-} */
 .sectionTwo{
     display: flex;
-    
 }
-.scrollThese{
+.scrollThese {
     height: 66vh;
     display: flex;
     flex-direction: row;
@@ -123,49 +105,95 @@ li{
     justify-content: flex-start;
     gap: 2vh;
     margin-left: 5vh;
-} 
-.cards1{
+}
+.cards1 {
     flex: 1;
     background-color: white;
     height: auto;
     width: auto;
+    position: relative;
 }
-.scrollTheseImg{
+.scrollTheseImg {
     height: 70vh;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: block;
 }
-.scrollTheseImg:hover{
-    transition: scale(1,1);
-    height: 71vh;
+.scrollTheseImg.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.cards1:hover .scrollTheseImg.hover-img {
+    opacity: 1;
+}
+.scrollTheseImg:hover {
+    transform: scale(1.05);
     border-radius: 3%;
 }
-
 .bottomText{
     display: flex;
+    padding-top: 8px;
     text-align: left;
     font-weight: 600;
 }
 .trending-now{
-    text-align: center;
+    text-align: left;
+    margin-left: 5vh;
     margin-top: 8%;
     margin-bottom: 5vh;
 }
-.trending_nav{
+/* Trending Nav Styles */
+.trending_nav {                     /*if you can make this nav bar better then try something using gpt*/
     display: flex;
-    background-color: rgb(231, 231, 231);
-    width: 50%;
     justify-content: space-around;
-    margin: 0 auto;
-    margin-bottom: 5vh;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 2px solid #ff4d4d;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    width: 70%;
+    max-width: 1200px;
 }
-.nav_link a{
-    text-decoration: none;
-    color: black;
-    padding: 1vh;
+.nav_link {
+    position: relative;
+    flex: 1;
+    text-align: center;
 }
-.nav_link :hover{
-    background-color: white;
+.nav_link a {
     text-decoration: none;
-    color: black;
+    font-size: 1rem;
+    color: #000;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav_link a:hover {
+    color: #ff4d4d;
+    border-color: #ff4d4d;
+    box-shadow: none;
+}
+.nav_link a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff4d4d;
+    transition: width .3s;
+    margin: 5px auto 0;
+    border-radius: 1px;
+}
+.nav_link a:hover::after {
+    width: 80%;
+    background-color: #ff4d4d;
 }
 .card_holder{
     display: flex;
@@ -206,86 +234,30 @@ li{
     flex-direction: column;
     overflow: scroll;
     scroll-behavior: smooth;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-.card::-webkit-scrollbar, .trending_items_container::-webkit-scrollbar{
-        display: none;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.trending_items_container {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto; /* Ensure container can scroll */
-    scroll-behavior: smooth;
-    height: 100vh;
-    width: 93.9vw;
+.card::-webkit-scrollbar{
+    display: none;
 }
-.section{
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    /* position: relative; */
+.card_text{
+    font-family: "Geologica", sans-serif;
+    font-size: 2vh;
+    margin-left: 1vh;
 }
-.trending_items{
-    min-height: 100vh;
-    min-width: 93.9vw;
-    position: relative;
+.card_text_category{
+    color: grey;
 }
-.left{
-    position: absolute;
-    top: 0vh;
-    left: 0vw;
-    height: 100vh;
-    width: 22.5vw;
+.page-break{
+    border: 0.5px solid black;
 }
-.centre{
-    position: absolute;
-    top: 0vh;
-    left: 22.5vw;
-    height: 100vh;
-    min-width: 50vw;
+.recommended_div{
+    animation: fadeIn 1s ease-in-out;
 }
-.right{
-    position: absolute;
-    top: 0vh;
-    left: 72.5vw;
-    height: 100vh;
-    min-width: 20vw;
-}
-.box_img{
-    height: 100vh;
-    width: 50vw;
-    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c200d193318977.5e615372d7d52.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-}
-.box_img :hover{
-    cursor: none;
-}
-.shoe_img{
-    position: absolute;
-    z-index: 1;
-    background-position: center center;
-    background-attachment:  fixed;
-    background-size: 100vh 50vw;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    /* transform: translate(-50%, -50%);  */
-}
-
-.scroll{
-    width: 2.5vw;
-}
-.scroll-left{
-    left: 0vw;
-}
-.scroll-right{
-    right: 0vw;
-}
-.scroll-button{
-    height: 25vh;
-    width: 2.5vw;
-    background-color: white;
-    font-size: 3vw;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

@@ -68,8 +68,8 @@ $(".nav_link").eq(0).css("background-color", "red");
         $('.trending_items_container').animate({ scrollLeft: '+=' + vw }, 100);
     };
     
-
-const handleOnMouseMove = e => {
+   
+const handleOnMouseMove = e => {                        //For the big image animation
     const {currentTarget: target} = e;
 
     const rect = target.getBoundinfClientRect(),
@@ -77,4 +77,7 @@ const handleOnMouseMove = e => {
     y = e.clientY - rect.top;
     target.style.setProperty("--mouse-x", `${x}px`)
     target.style.setProperty("--mouse-y", `${y}px`)
+}
+for(const card of document.querySelectorAll(".sectionOne")){
+    card.onmousemove = e => handleOnMouseMove(e);
 }
