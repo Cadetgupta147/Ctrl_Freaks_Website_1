@@ -121,7 +121,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function toggleMenu() {
     const leftSide = document.querySelector('.left-side');
+    const rightSide = document.querySelector('.right-side');
     leftSide.classList.toggle('show-menu');
+    rightSide.classList.toggle('show-menu');
 }
 
 
