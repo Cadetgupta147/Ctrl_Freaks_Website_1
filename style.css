@@ -227,9 +227,12 @@ li:hover {
     max-width: 1200px;
 }
 .nav_link {
+    background-color: white;
     position: relative;
     flex: 1;
     text-align: center;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
 }
 .nav_link a {
     text-decoration: none;
@@ -415,8 +418,10 @@ li:hover {
     }
 
     .trending_nav {
+        background-color: white;
         width: 80%;
     }
+    
 
     .scroll {
         height: 20vh;

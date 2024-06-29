@@ -11,7 +11,7 @@ $(".nav_link").eq(0).css("background-color", "red");
                 $(".nav_link").eq(i).css("background-color", "red");
             } else {
                 section.eq(i).css("display", "none");
-                $(".nav_link").eq(i).css("background-color", "rgb(231, 231, 231)");
+                $(".nav_link").eq(i).css("background-color", "white");
             }
         }
     });
@@ -69,15 +69,15 @@ $(".nav_link").eq(0).css("background-color", "red");
     };
     
    
-const handleOnMouseMove = e => {                        //For the big image animation
-    const {currentTarget: target} = e;
+// const handleOnMouseMove = e => {                        //For the big image animation
+//     const {currentTarget: target} = e;
 
-    const rect = target.getBoundinfClientRect(),
-    x = e.clientX - rect.left,
-    y = e.clientY - rect.top;
-    target.style.setProperty("--mouse-x", `${x}px`)
-    target.style.setProperty("--mouse-y", `${y}px`)
-}
+//     const rect = target.getBoundinfClientRect(),
+//     x = e.clientX - rect.left,
+//     y = e.clientY - rect.top;
+//     target.style.setProperty("--mouse-x", `${x}px`)
+//     target.style.setProperty("--mouse-y", `${y}px`)
+// }
 
 document.addEventListener("DOMContentLoaded", function() {
     const imgContainer = document.querySelector('.sectionOne .imgContainer');
