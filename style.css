@@ -252,23 +252,6 @@ li:hover {
     margin-bottom: 5vh;
 }
 
-.mens_card {
-    height: 341px;
-    width: 341px;
-    background-position: center;
-    background-attachment: scroll;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 300ms, box-shadow 300ms;
-}
-
-.mens_card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 .card {
     display: flex;
     flex-direction: column;
