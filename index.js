@@ -68,8 +68,8 @@ $(".nav_link").eq(0).css("background-color", "red");
         $('.trending_items_container').animate({ scrollLeft: '+=' + vw }, 100);
     };
     
-
-const handleOnMouseMove = e => {
+   
+const handleOnMouseMove = e => {                        //For the big image animation
     const {currentTarget: target} = e;
 
     const rect = target.getBoundinfClientRect(),
@@ -120,3 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+for(const card of document.querySelectorAll(".sectionOne")){
+    card.onmousemove = e => handleOnMouseMove(e);
+}
