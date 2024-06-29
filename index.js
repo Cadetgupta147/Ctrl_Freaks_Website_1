@@ -119,8 +119,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-
-for(const card of document.querySelectorAll(".sectionOne")){
-    card.onmousemove = e => handleOnMouseMove(e);
+function toggleMenu() {
+    const leftSide = document.querySelector('.left-side');
+    const rightSide = document.querySelector('.right-side');
+    leftSide.classList.toggle('show-menu');
+    rightSide.classList.toggle('show-menu');
 }
+
+
+
+
+// for(const card of document.querySelectorAll(".sectionOne")){
+//     card.onmousemove = e => handleOnMouseMove(e);
+// }
