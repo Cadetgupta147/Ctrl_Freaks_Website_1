@@ -144,7 +144,7 @@ li{
     margin-bottom: 5vh;
 }
 /* Trending Nav Styles */
-.trending_nav {                     /*if you can make this nav bar better then try something using gpt*/
+.trending_nav {                     /*if you can make this nav bar better then try something*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -217,17 +217,6 @@ li{
 }
 .recommended{
     margin-bottom: 5vh;
-}
-.mens_card{
-    height: 341px;
-    width: 341px;
-    border: 1px solid black;
-    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c200d193318977.5e615372d7d52.jpg);
-    background-position: center;
-    background-attachment: scroll;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
 }
 .card {
     display: flex;
