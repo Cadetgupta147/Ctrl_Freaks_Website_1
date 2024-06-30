@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <ul class="top-bar">
+            <li id="call-icon"><ion-icon name="call-outline"></ion-icon> Contact us</li>
+            <li class="socials"><a href="https://www.facebook.com/Newbalance/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li class="socials"><a href="https://twitter.com/newbalance?lang=en"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li class="socials"> <a href="https://www.instagram.com/newbalance/?hl=en"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+    </div>
+    <div class="bottom-bar">
+        <ul class="left-side">
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT3v-ju-w26A5X9q4wVbGbO9P97pZr22e9kA&s" id="logo" alt="company logo" height="60px" width="60px"></li>
+            <li class="menu-item">NEW</li>
+            <li class="menu-item">Men</li>
+            <li class="menu-item">Women</li>
+            <li class="menu-item">Kids</li>
+            <li class="menu-item">Sale</li>
+            <li class="menu-item">Featured</li>
+        </ul>
+        <ul class="right-side">
+            <li class="menu-item"><ion-icon name="search-outline"></ion-icon></li>
+            <li class="menu-item"><ion-icon name="person-outline"></ion-icon> Login|Sign Up</li>
+            <li class="menu-item"><ion-icon name="heart-outline"></ion-icon></li>
+            <li class="menu-item"><ion-icon name="cart-outline"></ion-icon></li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()">
+            <ion-icon name="menu-outline"></ion-icon>
+        </button>
+    </div>
+    
+        <section class="sectionOne">
+            <div class="imgContainer">
+                <div class="imgWrapper">
+                    <a href="#"><img class="img" fetch-priority="high" src="felipepelaquim-IoQ7ggk4oN4-unsplash.jpg" alt="shoeB-g"></a>
+                </div>
+                <div class="imgWrapper">
+                    <a href="#"><img class="img" fetch-priority="high" src="felipepelaquim-IoQ7ggk4oN4-unsplash.jpg" alt="shoeB-g"></a>
+                </div>
+                <div class="imgWrapper">
+                    <img class="img" src="https://via.placeholder.com/800x400?text=Image1" alt="Image 1">
+                </div>
+                <div class="imgWrapper">
+                    <img class="img" src="https://via.placeholder.com/800x400?text=Image2" alt="Image 2">
+                </div>
+                <div class="imgWrapper">
+                    <img class="img" src="https://via.placeholder.com/800x400?text=Image3" alt="Image 3">
+                </div>
+            </div>
+            <div class="imageOverlay">
+                <h1 class="textOnImage">Everything Awaits.</h1>
+                <button type="button" class="btn btn-outline-danger">Shop Now</button>
+            </div>
+        </section>
+        
+    <div class = "sectionTwo" style="display: block;">
+        <div class = "forPadding">
+            <h3>Shop by category</h3>
+        </div>
+        <div class = "scrollThese" style="display: flex;">
+            <div class="cards1">
+                <img src="gettyimages-1290696244-612x612.jpg" class="scrollTheseImg" data-hover="hover-image1.jpg">
+                <img src="gettyimages-1296716905-612x612.jpg" class="scrollTheseImg hover-img">
+                <div class = "bottomText">New Arrivals</div>
+            </div>
+            <div class="cards1">
+                <img src="HD-wallpaper-new-balance-574-shoes-sneakers-thumbnail.jpg" class="scrollTheseImg" data-hover="gettyimages-103666731-612x612.jpg">
+                <img src="gettyimages-495570580-612x612.jpg" class="scrollTheseImg hover-img">
+                <div class = "bottomText">Shoes</div>
+            </div>
+            <div class="cards1">
+                <img src="gettyimages-1205697585-612x612.jpg" class="scrollTheseImg" data-hover="hover-image1.jpg">
+                <img src="gettyimages-1419672128-612x612.jpg" class="scrollTheseImg hover-img">
+                <div class = "bottomText">Clothing</div>
+            </div>
+            <div class="cards1">
+                <img src="gettyimages-820690436-612x612.jpg" class="scrollTheseImg" data-hover="hover-image2.jpg">
+                <img src="gettyimages-622339682-612x612.jpg" class="scrollTheseImg hover-img">
+                <div class = "bottomText">Accessories</div>
+            </div>
+           
+            </div>
+        </div>
+    </div>
+    <div class="trending_div">
+        <div class="trending-now">
+            <h3>Trending Now</h3>
+        </div>    
+        <div class="trending_nav">
+            <div class="nav_link"><a href="#" class="text nav_text">Men</a></div>
+            <div class="nav_link"><a href="#" class="text nav_text">Women</a></div>
+            <div class="nav_link"><a Href = "#" class="text nav_text">Kids</a></div>
+        </div>
+        
+            <!-- Men Shoes -->
+            <div class="section" id="Men">
+                <div class="scroll scroll-left">
+                    <button class="scroll-button left-scroll-button" onclick="scrolll()" >&#x21e6;</button>
+                </div>
+                <div class="card">
+                    <div class="trending_items_container">
+                        <div class="trending_items">
+                            <div class="left">
+                                <div class="shoe_name">
+                                    <h3>Lorem ipsum dolor sit amet</h3>
+                                </div>
+                                <div class="shoe_description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laborum esse rerum similique repellat laboriosam, necessitatibus autem! Maxime consequuntur eius nihil ducimus ex quia dolorem explicabo quis. Accusantium, obcaecati cupiditate? Illum, et assumenda consequatur omnis praesentium molestias magni perferendis, excepturi ad provident neque! Fugiat, exercitationem labore necessitatibus animi error ducimus!</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit sint eaque nihil voluptatibus illo a architecto excepturi voluptates doloribus. Corporis repellat autem, eligendi dolor assumenda cupiditate aspernatur cum necessitatibus hic et voluptatibus pariatur! Quod labore aliquam ipsa aliquid? Obcaecati labore temporibus corporis beatae nobis quisquam magnam ex natus! Esse?</p>
+                                </div>
+                            </div>
+                            <div class="centre">
+                                <div class="box_img">
+                                    <div class="shoe_img" style="background-image: url(https://m.media-amazon.com/images/I/61i+-qySCsL._AC_UY1000_.jpg);"></div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h3>Shoe Price : $1000</h3>
+                            </div>
+                            
+                        </div>
+                        <div class="trending_items">
+                            <div class="left">
+                                <div class="shoe_name">
+                                    <h3>Lorem ipsum dolor sit amet</h3>
+                                </div>
+                                <div class="shoe_description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laborum esse rerum similique repellat laboriosam, necessitatibus autem! Maxime consequuntur eius nihil ducimus ex quia dolorem explicabo quis. Accusantium, obcaecati cupiditate? Illum, et assumenda consequatur omnis praesentium molestias magni perferendis, excepturi ad provident neque! Fugiat, exercitationem labore necessitatibus animi error ducimus!</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit sint eaque nihil voluptatibus illo a architecto excepturi voluptates doloribus. Corporis repellat autem, eligendi dolor assumenda cupiditate aspernatur cum necessitatibus hic et voluptatibus pariatur! Quod labore aliquam ipsa aliquid? Obcaecati labore temporibus corporis beatae nobis quisquam magnam ex natus! Esse?</p>
+                                </div>
+                            </div>
+                            <div class="centre">
+                                <div class="box_img">
+                                    <div class="shoe_img" style="background-image: url(https://extrabutterny.in/cdn/shop/files/MT580GNV-1.jpg?v=1699695749);"></div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h3>Shoe Price : $1500</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll scroll-right">
+                    <button class="scroll-button right-scroll-button" onclick="scrollr()" >&#x21e8;</button>
+                </div>
+            </div>
+            
+        <!-- Women Shoes -->
+        <div class="section" id="Women" style="display: none;">
+            <div class="scroll scroll-left">
+                <button class="scroll-button left-scroll-button" onclick="scrolll()" >&#x21e6;</button>
+            </div>
+            <div class="card">
+                <div class="trending_items_container">
+                    <div class="trending_items">
+                        <div class="left">
+                            <div class="shoe_name">
+                                <h3>Lorem ipsum dolor sit amet</h3>
+                            </div>
+                            <div class="shoe_description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laborum esse rerum similique repellat laboriosam, necessitatibus autem! Maxime consequuntur eius nihil ducimus ex quia dolorem explicabo quis. Accusantium, obcaecati cupiditate? Illum, et assumenda consequatur omnis praesentium molestias magni perferendis, excepturi ad provident neque! Fugiat, exercitationem labore necessitatibus animi error ducimus!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit sint eaque nihil voluptatibus illo a architecto excepturi voluptates doloribus. Corporis repellat autem, eligendi dolor assumenda cupiditate aspernatur cum necessitatibus hic et voluptatibus pariatur! Quod labore aliquam ipsa aliquid? Obcaecati labore temporibus corporis beatae nobis quisquam magnam ex natus! Esse?</p>
+                            </div>
+                        </div>
+                        <div class="centre">
+                            <div class="box_img">
+                                <div class="shoe_img" style="background-image: url(https://assets.ajio.com/medias/sys_master/root/20230809/0kxO/64d3b0fceebac147fcb9fbbd/-473Wx593H-469473156-offwhite-MODEL.jpg);"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h3>Shoe Price : $1000</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="trending_items">
+                        <div class="left">
+                            <div class="shoe_name">
+                                <h3>Lorem ipsum dolor sit amet</h3>
+                            </div>
+                            <div class="shoe_description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laborum esse rerum similique repellat laboriosam, necessitatibus autem! Maxime consequuntur eius nihil ducimus ex quia dolorem explicabo quis. Accusantium, obcaecati cupiditate? Illum, et assumenda consequatur omnis praesentium molestias magni perferendis, excepturi ad provident neque! Fugiat, exercitationem labore necessitatibus animi error ducimus!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit sint eaque nihil voluptatibus illo a architecto excepturi voluptates doloribus. Corporis repellat autem, eligendi dolor assumenda cupiditate aspernatur cum necessitatibus hic et voluptatibus pariatur! Quod labore aliquam ipsa aliquid? Obcaecati labore temporibus corporis beatae nobis quisquam magnam ex natus! Esse?</p>
+                            </div>
+                        </div>
+                        <div class="centre">
+                            <div class="box_img">
+                                <div class="shoe_img" style="background-image: url(https://nb.scene7.com/is/image/NB/u9060gry_nb_02_i?$pdpflexf2$&wid=440&hei=440);"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h3>Shoe Price : $1500</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll scroll-right">
+                <button class="scroll-button right-scroll-button" onclick="scrollr()" >&#x21e8;</button>
+            </div>
+        </div>
+        <!-- Kids Shoes -->
+        <div class="section" id="Kids" style="display: none;">
+            <div class="scroll scroll-left">
+                <button class="scroll-button left-scroll-button" onclick="scrolll()" >&#x21e6;</button>
+            </div>
+            <div class="card">
+                <div class="trending_items_container">
+                    <div class="trending_items">
+                        <div class="left">
+                            <div class="shoe_name">
+                                <h3>Lorem ipsum dolor sit amet</h3>
+                            </div>
+                            <div class="shoe_description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laborum esse rerum similique repellat laboriosam, necessitatibus autem! Maxime consequuntur eius nihil ducimus ex quia dolorem explicabo quis. Accusantium, obcaecati cupiditate? Illum, et assumenda consequatur omnis praesentium molestias magni perferendis, excepturi ad provident neque! Fugiat, exercitationem labore necessitatibus animi error ducimus!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit sint eaque nihil voluptatibus illo a architecto excepturi voluptates doloribus. Corporis repellat autem, eligendi dolor assumenda cupiditate aspernatur cum necessitatibus hic et voluptatibus pariatur! Quod labore aliquam ipsa aliquid? Obcaecati labore temporibus corporis beatae nobis quisquam magnam ex natus! Esse?</p>
+                            </div>
+                        </div>
+                        <div class="centre">
+                            <div class="box_img">
+                                <div class="shoe_img" style="background-image: url(https://nb.scene7.com/is/image/NB/u9060gry_nb_02_i?$pdpflexf2$&wid=440&hei=440);"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h3>Shoe Price : $1000</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="trending_items">
+                        <div class="left">
+                            <div class="shoe_name">
+                                <h3>Lorem ipsum dolor sit amet</h3>
+                            </div>
+                            <div class="shoe_description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laborum esse rerum similique repellat laboriosam, necessitatibus autem! Maxime consequuntur eius nihil ducimus ex quia dolorem explicabo quis. Accusantium, obcaecati cupiditate? Illum, et assumenda consequatur omnis praesentium molestias magni perferendis, excepturi ad provident neque! Fugiat, exercitationem labore necessitatibus animi error ducimus!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit sint eaque nihil voluptatibus illo a architecto excepturi voluptates doloribus. Corporis repellat autem, eligendi dolor assumenda cupiditate aspernatur cum necessitatibus hic et voluptatibus pariatur! Quod labore aliquam ipsa aliquid? Obcaecati labore temporibus corporis beatae nobis quisquam magnam ex natus! Esse?</p>
+                            </div>
+                        </div>
+                        <div class="centre">
+                            <div class="box_img">
+                                <div class="shoe_img" style="background-image: url(https://nb.scene7.com/is/image/NB/u9060gry_nb_02_i?$pdpflexf2$&wid=440&hei=440);"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h3>Shoe Price : $00</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll scroll-right">
+                <button class="scroll-button right-scroll-button" onclick="scrollr()" >&#x21e8;</button>
+            </div>
+        </div>
+    </div>   
+
+    <div class="animation">
+        <img src="https://placehold.co/1480x800?text=Animation" alt="">
+    </div>
+
+    <div class="recommended_div">
+        <div class="recommended">
+            <h3>Recommended for you</h3>
+        </div>    
+        <div class="card_holder">
+            <div class="cards">
+                <img src="https://placehold.co/341x341" alt="#">
+                <div class="card_text_container">
+                    <div class="shoes_information">
+                        <div class="card_text">Shoes Name</div>
+                        <div class="card_text">Price</div>
+                    </div>
+                    <div class="card_text card_text_category">Category</div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <img src="https://placehold.co/341x341" alt="#">
+                <div class="card_text_container">
+                    <div class="shoes_information">
+                        <div class="card_text">Shoes Name</div>
+                        <div class="card_text">Price</div>
+                    </div>
+                    <div class="card_text card_text_category">Category</div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <img src="https://placehold.co/341x341" alt="#">
+                <div class="card_text_container">
+                    <div class="shoes_information">
+                        <div class="card_text">Shoes Name</div>
+                        <div class="card_text">Price</div>
+                    </div>
+                    <div class="card_text card_text_category">Category</div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <img src="https://placehold.co/341x341" alt="#">
+                <div class="card_text_container">
+                    <div class="shoes_information">
+                        <div class="card_text">Shoes Name</div>
+                        <div class="card_text">Price</div>
+                    </div>
+                    <div class="card_text card_text_category">Category</div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <img src="https://placehold.co/341x341" alt="#">
+                <div class="card_text_container">
+                    <div class="shoes_information">
+                        <div class="card_text">Shoes Name</div>
+                        <div class="card_text">Price</div>
+                    </div>
+                    <div class="card_text card_text_category">Category</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
