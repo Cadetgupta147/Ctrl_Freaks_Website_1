@@ -412,46 +412,65 @@ li:hover {
 
 .image-wrapper {
     position: relative;
-    width: 300px; /* Adjust as needed */
-    height: 600px; /* Adjust as needed */
+    width: 40vw; 
+    height: 100vh; 
+    margin-left: 5vw;
 }
 
 .leg-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the specified dimensions */
+    border-radius: 0% 20% 0% 20%;
+    object-fit: cover; 
 }
 
 .footwear-img {
     position: absolute;
-    bottom: -40px; /* Align it to the bottom of the leg image */
-    left: 40%; /* Center it horizontally */
-    transform: translateX(-50%); /* Center it horizontally */
-    width: 60%; /* Adjust as needed */
-    height: auto; /* Adjust as needed */
-    object-fit: cover; /* Ensure the image covers the specified dimensions */
-    display: none; /* Hide it initially */
+    bottom: -7%; 
+    left: 43%; 
+    transform: translateX(-50%); 
+    min-height: 30%;
+    width: 32.5%; 
+    height: auto; 
+    object-fit: cover; 
+    display: block;
+    
+}
+.footwear-img2 {
+    position: absolute;
+    bottom: 11.5%; 
+    left: 28%; 
+    transform: translateX(-50%) rotate(50deg); 
+    min-height: 25%;
+    width: 32.5%; 
+    height: auto; 
+    object-fit: cover; 
+    display: block;
     
 }
 
 .footwear-container {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    width: 50vw;
+
 }
 
 .footwear {
-    min-width: 20vw; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
+    min-width: 20vw; 
+    height: 23vh; 
     margin-right: 10px;
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
 
 .footwear img {
-    width: 100%; /* Make the image fill the container */
-    height: 100%; /* Make the image fill the container */
-    object-fit: cover; /* Ensure the image covers the specified dimensions */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
 }
 
 .footwear:hover {

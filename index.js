@@ -136,12 +136,15 @@ function toggleMenu() {
 document.addEventListener('DOMContentLoaded', function() {
     const footwearContainer = document.querySelector('.footwear-container');
     const footwearOverlay = document.getElementById('footwear-overlay');
+    const footwearOverlay2 = document.getElementById('footwear-overlay-2');
     const footwears = document.querySelectorAll('.footwear img');
 
     footwears.forEach(footwear => {
         footwear.addEventListener('click', function() {
             footwearOverlay.src = this.src;
             footwearOverlay.style.display = 'block';
+            footwearOverlay2.src = this.src;
+            footwearOverlay2.style.display = 'block';
         });
     });
 
@@ -150,7 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const rect = footwear.getBoundingClientRect();
             if (rect.left >= 0 && rect.right <= window.innerWidth) {
                 footwearOverlay.src = footwear.src;
+                footwearOverlay2.src = footwear.src;
                 footwearOverlay.style.display = 'block';
+                footwearOverlay2.style.display = 'block';
             }
         });
     });
