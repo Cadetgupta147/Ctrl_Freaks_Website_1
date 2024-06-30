@@ -399,6 +399,66 @@ li:hover {
     background-color: #ddd;
 }
 
+/* footwear section */
+.leg-and-footwear-section {
+    display: flex;
+    align-items: center;
+}
+
+.leg-container {
+    flex: 1;
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 600px; /* Adjust as needed */
+}
+
+.leg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
+}
+
+.footwear-img {
+    position: absolute;
+    bottom: -40px; /* Align it to the bottom of the leg image */
+    left: 40%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    width: 60%; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
+    display: none; /* Hide it initially */
+    
+}
+
+.footwear-container {
+    flex: 1;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.footwear {
+    min-width: 20vw; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    margin-right: 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footwear img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
+}
+
+.footwear:hover {
+    transform: scale(1.1);
+}
+
+
 /* Media Queries */
 
 @media (max-width: 1200px) {

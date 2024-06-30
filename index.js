@@ -132,3 +132,28 @@ function toggleMenu() {
 // for(const card of document.querySelectorAll(".sectionOne")){
 //     card.onmousemove = e => handleOnMouseMove(e);
 // }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const footwearContainer = document.querySelector('.footwear-container');
+    const footwearOverlay = document.getElementById('footwear-overlay');
+    const footwears = document.querySelectorAll('.footwear img');
+
+    footwears.forEach(footwear => {
+        footwear.addEventListener('click', function() {
+            footwearOverlay.src = this.src;
+            footwearOverlay.style.display = 'block';
+        });
+    });
+
+    footwearContainer.addEventListener('scroll', function() {
+        footwears.forEach(footwear => {
+            const rect = footwear.getBoundingClientRect();
+            if (rect.left >= 0 && rect.right <= window.innerWidth) {
+                footwearOverlay.src = footwear.src;
+                footwearOverlay.style.display = 'block';
+            }
+        });
+    });
+});
+
+
