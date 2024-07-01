@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    scrollInterval = setInterval(scrollImages, 500);
+    scrollInterval = setInterval(scrollImages, 1500);
 
     imgContainer.addEventListener('scroll', function() {
         window.clearInterval(scrollInterval);
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.clearTimeout(isScrolling);
         isScrolling = setTimeout(function() {
             currentIndex = Math.round(imgContainer.scrollLeft / imgContainer.clientWidth);
-            scrollInterval = setInterval(scrollImages, 500); 
+            scrollInterval = setInterval(scrollImages, 1500); 
         }, 66); 
     });
 });
@@ -159,6 +159,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+window.addEventListener('load', function() {
+    // After 2 seconds, fade out the curtain
+    setTimeout(function() {
+        var curtain = document.querySelector('.curtain');
+        if (curtain) {
+            curtain.style.opacity = 0;
+            curtain.style.pointerEvents = 'none'; // Optional: Disable pointer events on curtain
+        }
+    }, 1000); // 2000 milliseconds = 2 seconds
 });
 
 

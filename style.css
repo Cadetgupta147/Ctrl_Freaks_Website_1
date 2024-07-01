@@ -10,7 +10,26 @@ html, body {
     overflow-x: hidden;
     font-family: "Geologica", sans-serif;
 }
+.curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1; /* Reduce z-index */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
 
+
+.curtain img {
+    max-width: 100%;
+    max-height: 100%;
+}
 .top-bar {
     display: flex;
     flex-direction: row;
@@ -90,9 +109,6 @@ li:hover {
     transition: opacity 500ms;
 }
 
-.sectionOne:hover {
-    opacity: 0.8;
-}
 
 .sectionOne::before {
     background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 1), transparent 40%);
@@ -138,7 +154,6 @@ li:hover {
 
 .textOnImage {
     color: #DEDEDE;
-    font-size: 24px;
     font-weight: bold;
 }
 
@@ -167,7 +182,7 @@ li:hover {
     display: flex;
 }
 .scrollThese {
-    height: 66vh;
+    height: 78vh;
     display: flex;
     overflow: auto;
     gap: 2vh;
@@ -288,6 +303,14 @@ li:hover {
 
 .featured_item, .animation, .recommended {
     margin-bottom: 5vh;
+}
+.animation{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 120vh;
+    width: 100%;
 }
 
 .card {
@@ -732,4 +755,42 @@ li:hover {
     .scroll-button {
         font-size: 2vw;
     }
+}
+/*changes to the shoe description*/
+.left {
+    flex: 2;
+    padding: 20px;
+}
+
+.shoe_name h3 {
+    font-size: 24px;
+    color: #333;
+    border: 3.5px solid #ff0000; /* Adds a thin border */
+    padding: 15px; /* Adds some padding inside the border */
+    display: inline-block; /* Ensures the border wraps around the text */
+    border-radius: 8%;
+    margin-bottom: 10px;
+    font-family: "Geologica", sans-serif;
+    font-weight: bold;
+}
+
+.shoe_description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    font-family: "Geologica", sans-serif;
+}
+.right {
+    flex: 1;
+    padding: 20px;
+    text-align: right;
+}
+
+.right h3 {
+    font-size: 20px;
+    color: #333;
+    font-family: "Geologica", sans-serif;
+    font-weight: bold;
+    margin-bottom: 14px;
 }
