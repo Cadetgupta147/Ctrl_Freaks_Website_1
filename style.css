@@ -17,7 +17,7 @@ html, body {
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    z-index: 1; /* Reduce z-index */
+    z-index: 99; /* Reduce z-index */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,11 +306,28 @@ li:hover {
 }
 .animation{
     margin-top: 15vh;
+    display: block;
     display: flex;
     justify-content: center;
     flex: 1;
     height: 120vh;
     width: 100%;
+    text-align: center;
+    margin: 0, auto;
+}
+
+#textUnderImg{
+    margin-left: 5vh;
+    margin-top: 6px;
+    margin-bottom: 15vh;
+    font-size: large;
+    font-weight: 300;
+    font-family: "Geologica", sans-serif;
+    border-bottom: 3.5px solid #ff0000; /* Adds a thin border */
+    padding: 12px; /* Adds some padding inside the border */
+    display: inline-block; /* Ensures the border wraps around the text */
+    border-radius: 8%;
+
 }
 
 .card {
@@ -436,14 +453,15 @@ li:hover {
 .image-wrapper {
     position: relative;
     width: 40vw; 
-    height: 100vh; 
-    margin-left: 5vw;
+    height: 120vh; 
+    margin-left: 0;
 }
 
 .leg-img {
+    margin-top: 15vh;
     width: 100%;
     height: 100%;
-    border-radius: 0% 20% 0% 20%;
+    border-radius: 0% 8% 8% 0%;
     object-fit: cover; 
 }
 
@@ -765,8 +783,8 @@ li:hover {
 .shoe_name h3 {
     font-size: 24px;
     color: #333;
-    border: 3.5px solid #ff0000; /* Adds a thin border */
-    padding: 15px; /* Adds some padding inside the border */
+    border-bottom: 3.5px solid #ff0000; /* Adds a thin border */
+    padding: 12px; /* Adds some padding inside the border */
     display: inline-block; /* Ensures the border wraps around the text */
     border-radius: 8%;
     margin-bottom: 10px;
@@ -793,4 +811,111 @@ li:hover {
     font-family: "Geologica", sans-serif;
     font-weight: bold;
     margin-bottom: 14px;
+}
+.footer {
+    margin-top: 20vh;
+    background-color: #ff0000;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-signup form {
+    display: flex;
+}
+
+.footer-signup input[type="email"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    width: 200px;
+}
+
+.footer-signup button {
+    padding: 8px 15px;
+    background-color: white;
+    color: red;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.footer-signup button:hover {
+    background-color: #f0f0f0;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-social ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-social ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social ul li a {
+    color: white;
+    font-size: 18px;
+}
+
+.footer-social ul li a:hover {
+    color: #f0f0f0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
 }
