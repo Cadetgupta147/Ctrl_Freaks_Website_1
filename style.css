@@ -309,7 +309,7 @@ li {
     scroll-snap-type: x mandatory;
 }
 
-.card_holder::-webkit-scrollbar {
+.card_holder::-webkit-scrollbar, .footwear-container::-webkit-scrollbar {
     display: none;
 }
 .shoes_information {
@@ -447,6 +447,9 @@ li {
 }
 
 /* footwear section */
+.leg-and-footwear-section{
+    margin-top: 5vh;
+}
 .leg-and-footwear-section {
     display: flex;
     align-items: center;
