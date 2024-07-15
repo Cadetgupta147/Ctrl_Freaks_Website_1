@@ -309,7 +309,7 @@ li {
     scroll-snap-type: x mandatory;
 }
 
-.card_holder::-webkit-scrollbar {
+.card_holder::-webkit-scrollbar, .footwear-container::-webkit-scrollbar {
     display: none;
 }
 .shoes_information {
@@ -318,10 +318,17 @@ li {
     padding: 1em;
 }
 
-.featured_item {
+.featured_item ,.animation{
     margin-bottom: 5vh;
 }
-
+.animation{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 120vh;
+    width: 100%;
+}
 .sectionTwo
 #textUnderImg{
     margin-left: 5vh;
@@ -447,6 +454,9 @@ li {
 }
 
 /* footwear section */
+.leg-and-footwear-section{
+    margin-top: 5vh;
+}
 .leg-and-footwear-section {
     display: flex;
     align-items: center;
